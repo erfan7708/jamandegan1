@@ -1,0 +1,25 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+    {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}
+                    </strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <h2>Sign up Form</h2>
+    <form method="post" action="/app/signup_view">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Sign up</button>
+    </form>
+{% endblock %}

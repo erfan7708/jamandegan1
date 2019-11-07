@@ -1,0 +1,8 @@
+{% extends "navbar.html" %}
+{% block content %}
+    <form action="/app/sign_up" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+    </form>
+{% endblock %}
