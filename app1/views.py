@@ -34,17 +34,17 @@ def log_in(request):
         password=request.POST['password']
         user = authenticate(request , username=username , password=password)
         if user is None:
-            return HttpResponseRedirect('/app/signup_view')
+            return HttpResponseRedirect('/signup_view')
         else:
             login(request,user)
-            return HttpResponseRedirect('/app')
+            return HttpResponseRedirect('/')
 
     return render(request,'login.html')
 
 
 def log_out(request):
     logout(request)
-    return  HttpResponseRedirect('/app/login')
+    return  HttpResponseRedirect('/login')
 
 
 def signup_view(request):
