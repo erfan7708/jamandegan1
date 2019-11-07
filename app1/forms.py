@@ -8,7 +8,7 @@ class NameForm(forms.Form):
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
-from .models import Profile
+#from .models import Profile
 
 class SignUpForm(UserCreationForm):
     error_messages = {
@@ -41,7 +41,7 @@ class ContactForm(forms.Form):
     contact_email = forms.EmailField(required=False)
     content = forms.CharField(required=True , widget= forms.Textarea , max_length=250 , min_length=10)
 
-class ProfileForm(forms.Form):
-    class Meta:
-        model = Profile
-        fields = ('firstname' , 'lastname' , 'bio' , 'gender')
+# class ProfileForm(forms.Form):
+#     class Meta:
+#         model = Profile
+#         fields = ('firstname' , 'lastname' , 'bio' , 'gender')

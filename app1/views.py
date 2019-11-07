@@ -16,17 +16,17 @@ def navbar(request):
     isauthen = request.user.is_authenticated
     return render(request ,'index.html' , {'isauth' : isauthen})
 
-# def sign_up(request):
-#
-#     if request.method=='POST':
-#         form = NameForm(request.POST)
-#
-#         if form.is_valid():
-#             return HttpResponseRedirect('/app')
-#     else:
-#         form = NameForm()
-#
-#     return render(request , 'sign_up.html',{'form' : form})
+def sign_up(request):
+
+    if request.method=='POST':
+        form = NameForm(request.POST)
+
+        if form.is_valid():
+            return HttpResponseRedirect('/app')
+    else:
+        form = NameForm()
+
+    return render(request , 'sign_up.html',{'form' : form})
 
 def log_in(request):
     if request.method=='POST':
@@ -80,9 +80,9 @@ def contact(request):
     form_class = ContactForm
     return render(request, 'contact.html', {'form': form_class, })
 
-@login_required
-def user_profile(request):
-    return render(request , 'user-profile.html')
+#@login_required
+#def user_profile(request):
+#    return render(request , 'user-profile.html')
 
 
 
