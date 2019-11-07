@@ -6,17 +6,17 @@
     <title>navbar</title>
 </head>
 <body>
-<div class="ui secondary  menu" id="id_navbar">
-    <a class="active item" onclick="window.location.href = '/app';" id="id_navbar_home">
-        Home
+<div class="ui secondary  menu" id="navbar">
+    <a class="active item" onclick="window.location.href = '/app';" id="homepage">
+        صفحه اصلی
     </a>
 
     {% if not isauth %}
-        <a class="item" onclick="window.location.href = '/app/signup_view';" id="id_navbar_signup">
-        Sign Up
+        <a class="item" onclick="window.location.href = '/app/signup_view';" id="register">
+        ثبت نام
         </a>
-        <a class="item" onclick="window.location.href = '/app/login';" id="id_navbar_login">
-            Login
+        <a class="item" onclick="window.location.href = '/app/login';" id=login">
+        ورود
         </a>
     {% endif %}
     <a class="item" onclick="window.location.href = '/app/contact_us';" id="id_navbar_contact_us">
