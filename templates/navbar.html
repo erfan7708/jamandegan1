@@ -12,14 +12,14 @@
     </a>
 
     {% if not isauth %}
-        <a class="item" onclick=' href  = "/signup_view";' id="register">
+        <a class="item" href  = "/signup_view" id="register">
         ثبت نام
         </a>
-        <a class="item" onclick=' href = "/login";' id="login">
+        <a class="item"  href = "/login" id="login">
         ورود
         </a>
     {% endif %}
-    <a class="item" onclick=' href= "/contact_us";' id="id_navbar_contact_us">
+    <a class="item"  href= "/contact_us" id="id_navbar_contact_us">
         Contact us
     </a>
     <div class="right menu">
@@ -30,7 +30,7 @@
             </div>
         </div>
         {% if isauth %}
-        <a class="ui item" onclick='window.location.href = "/app/logout";' id="id_navbar_logout">
+        <a class="ui item" onclick='href = "/app/logout";' id="id_navbar_logout">
             Logout
         </a>
         {% endif %}
