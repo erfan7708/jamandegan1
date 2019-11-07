@@ -17,7 +17,7 @@
         {% endfor %}
     {% endif %}
     <h2>Sign up Form</h2>
-    <form method="post" action="/app/signup_view">
+    <form method="post" action="/signup_view">
         {% csrf_token %}
         {{ form }}
         <button type="submit">Sign up</button>
