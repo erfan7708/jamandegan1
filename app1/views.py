@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
 from .forms import NameForm
@@ -29,12 +30,13 @@ def sign_up(request):
     return render(request , 'sign_up.html',{'form' : form})
 
 def log_in(request):
-    if request.method=='POST':
+    if request.method == 'POST':
         username=request.POST['username']
         password=request.POST['password']
         user = authenticate(request , username=username , password=password)
         if user is None:
-            return HttpResponseRedirect('/signup_view')
+            messages.error(request, 'username or password not correct')
+            return render(request, 'login.html', {"error": True})
         else:
             login(request,user)
             return HttpResponseRedirect('/')
