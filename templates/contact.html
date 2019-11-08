@@ -1,7 +1,7 @@
 {% extends "navbar.html"%}
 {% block content %}
 <h1>Contact</h1>
-<form role="form" action="/contact_us" method="post">
+<form role="form" action="/contact_us" method="post" id="contact_us_form">
     {% csrf_token %}
     {{ form.as_p }}
     <button class='ui primary button' type="submit">Submit</button>
