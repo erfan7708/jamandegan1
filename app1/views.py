@@ -86,5 +86,5 @@ def contact(request):
 #    return render(request , 'user-profile.html')
 
 
-
-
+def panel(request):
+    return render(request,'panel.html')
