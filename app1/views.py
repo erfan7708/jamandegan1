@@ -46,7 +46,7 @@ def log_in(request):
 
 def log_out(request):
     logout(request)
-    return  HttpResponseRedirect('/login')
+    return  HttpResponseRedirect('/')
 
 
 def signup_view(request):
