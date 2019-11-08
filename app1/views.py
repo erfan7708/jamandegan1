@@ -64,7 +64,6 @@ def signup_view(request):
 
             user = authenticate(username=username, password=password ,
                                 email=email,firstname=first_name,lastname=last_name)
-            login(request, user)
             return redirect('index')
     else:
         form = SignUpForm()
