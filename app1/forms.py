@@ -12,7 +12,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 class SignUpForm(UserCreationForm):
     error_messages = {
-        'password_mismatch': ('گذرواژه و تکرار گذرواژه یکسان نیست')
+        'password_mismatch': ('گذرواژه و تکرار گذرواژه یکسان نیستند')
     }
     class Meta:
         model = User
@@ -29,7 +29,7 @@ class SignUpForm(UserCreationForm):
             'username':{
                 'max-length' : ('نام شما طولانی است'),
                 'required' : ('نام خود را وارد کنید '),
-                'unique' : ('کاربری نام کاربری زیر وجود دارد'),
+                'unique' : ('نام کاربری شما در سیستم موجود است'),
             },
             'email':{
                 'unique':('کاربری با ایمیل زیر وجود دارد')
