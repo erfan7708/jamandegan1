@@ -76,7 +76,7 @@ def contact(request):
     if request.method=='POST':
         form_class = ContactForm(request.POST)
         if form_class.is_valid():
-            return redirect('index')
+            return render(request,'done.html')
 
     form_class = ContactForm
     return render(request, 'contact.html', {'form': form_class, })

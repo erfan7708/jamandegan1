@@ -37,9 +37,9 @@ class SignUpForm(UserCreationForm):
         }
 
 class ContactForm(forms.Form):
-    subject= forms.CharField(required=True)
-    contact_email = forms.EmailField(required=False)
-    content = forms.CharField(required=True , widget= forms.Textarea , max_length=250 , min_length=10)
+    title= forms.CharField(required=True)
+    email = forms.EmailField(required=False)
+    text = forms.CharField(required=True , widget= forms.Textarea , max_length=250 , min_length=10)
 
 # class ProfileForm(forms.Form):
 #     class Meta:
